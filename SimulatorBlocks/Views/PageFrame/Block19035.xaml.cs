@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace SimulatorBlocks
+namespace SimulatorBlocks.Views.PageFrame
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для Block19035000.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Block19035 : Page
     {
-        public MainWindow()
+        public Block19035()
         {
             InitializeComponent();
         }

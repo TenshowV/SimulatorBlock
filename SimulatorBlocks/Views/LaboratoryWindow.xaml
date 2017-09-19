@@ -1,0 +1,61 @@
+﻿<Window x:Class="SimulatorBlocks.Views.LaboratoryWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:ed="http://schemas.microsoft.com/expression/2010/drawing"
+        xmlns:local="clr-namespace:SimulatorBlocks.Views"
+       mc:Ignorable="d"
+        d:DesignHeight ="1024"
+        d:DesignWidth ="1280"
+        Title="LaboratoryWindow" 
+        WindowStartupLocation="CenterScreen" 
+        ResizeMode="CanResizeWithGrip" 
+        SizeToContent="WidthAndHeight">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush>
+                <GradientStop Offset="0.4" Color="Silver"/>
+            </LinearGradientBrush>
+
+        </Grid.Background>
+        <StackPanel HorizontalAlignment="Center" Height="60" Margin="0,0,-0.4,0" VerticalAlignment="Top" Width="1274" Orientation="Horizontal">
+            <Button Content="Ф8.03.05М" Command="{Binding runBlockF8}" Width="300" FontSize="22" />
+            <Button Content="Имитатор-блок 19_03_05" Command="{Binding runBlock1903}" Width="325" FontSize="22"  />
+            <Button Content="Блок 19.26" Command="{Binding runBlock1926}" Width="325" FontSize="22"/>
+            <Button Content="Осциллограф/1960" Command="{Binding runOscill}" Width="327" FontSize="22"/>
+        </StackPanel>
+        <Frame Margin="0,0,0,1.4" HorizontalAlignment="Left" VerticalAlignment="Bottom" Height="928" RenderTransformOrigin="0.5,0.5" Width="490"
+               HorizontalContentAlignment="Stretch"
+               VerticalContentAlignment="Stretch"
+               NavigationUIVisibility="Hidden"
+               Content="{Binding leftBlock, Mode=OneWay,UpdateSourceTrigger=PropertyChanged}"/>
+        <Frame x:Name="frame" Content="{Binding otherBlocks, Mode=OneWay,UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Right" Height="230" Margin="0,65,9.6,0" VerticalAlignment="Top" Width="709" NavigationUIVisibility="Hidden" 
+               />
+        <TextBox x:Name="infoText" 
+                 HorizontalAlignment="Right" 
+                 VerticalAlignment="Bottom" Margin="0,0,9.6,135.4" TextWrapping="Wrap" 
+                 Text="{Binding infoText , Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,IsAsync=True }" 
+                 Width="769" IsEnabled="False" FontSize="22" FontWeight="Bold" Height="329"/>
+        
+        <ed:BlockArrow  x:Name="NextStepsArrow"
+            Fill="#FFF4F4F5" HorizontalAlignment="Right" Height="120" 
+                       Margin="0,0,172.6,10.4" Orientation="Right" Stroke="Black" VerticalAlignment="Bottom" 
+                       Width="183">
+            <ed:BlockArrow.InputBindings>
+                <MouseBinding MouseAction="LeftClick" Command="{Binding NextStep}"/>
+            </ed:BlockArrow.InputBindings>
+        </ed:BlockArrow>
+        <ed:BlockArrow x:Name="BackStepsArrow"
+            Fill="#FFF4F4F5" HorizontalAlignment="Right" Height="120" 
+                       Margin="0,0,355.6,10.4" Orientation="Left" Stroke="Black" 
+                       VerticalAlignment="Bottom"  Width="183"
+                       >
+            <ed:BlockArrow.InputBindings>
+                <MouseBinding MouseAction="LeftClick" Command="{Binding BehindStep }"/>
+            </ed:BlockArrow.InputBindings>
+        </ed:BlockArrow>
+        <Label x:Name="StatusMain" Content="{Binding infoTextTitle, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged,IsAsync=True}" HorizontalAlignment="Right" Margin="0,350,9.6,464.4" VerticalAlignment="Center" Height="180" Width="769" FontSize="36" FontWeight="Bold" FontFamily="Times New Roman"/>
+
+    </Grid>
+</Window>

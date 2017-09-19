@@ -1,0 +1,28 @@
+﻿<Page x:Class="SimulatorBlocks.Views.PageFrame.Oscilloscope"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:SimulatorBlocks.Views.PageFrame"
+      xmlns:vm="clr-namespace:SimulatorBlocks.ViewModels.PageViewModels"
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="300"
+      Title="Oscilloscope">
+    <Page.DataContext>
+        <vm:OscilloscopeView x:Name="oscillContext"/>
+    </Page.DataContext>
+    <Grid>
+        <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="10*"/>
+        <ColumnDefinition Width="157*"/>
+        </Grid.ColumnDefinitions>
+        <Canvas Grid.ColumnSpan="2" Margin="0,0,-0.4,-0.2">
+            <Image Height="300" VerticalAlignment="Top" HorizontalAlignment="Left" Width="605" x:Name="oscillImage" Margin="0" Canvas.Left="-5" Stretch="Fill" 
+                   Source="{Binding drawOscill }"/>
+            <Canvas x:Name="oscill" VerticalAlignment="Top" HorizontalAlignment="Left" Height="150" Width="210" Canvas.Left="45" Canvas.Top="40"/>
+            <Button
+                Background="{DynamicResource {x:Static SystemColors.ActiveCaptionTextBrushKey}}" 
+                BorderBrush="{DynamicResource {x:Static SystemColors.ActiveCaptionTextBrushKey}}" Height="16" Canvas.Left="300" Canvas.Top="30" Width="25" Click="OnOrOff"/>
+        </Canvas>
+    </Grid>
+</Page>

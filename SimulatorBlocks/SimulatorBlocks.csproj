@@ -8,11 +8,27 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>SimulatorBlocks</RootNamespace>
     <AssemblyName>SimulatorBlocks</AssemblyName>
-    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -23,6 +39,8 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -32,10 +50,19 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>SimulatorBlocks.App</StartupObject>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Expression.Drawing, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Expression.Drawing.3.0.0\lib\net45\Microsoft.Expression.Drawing.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -54,7 +81,61 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="MainWindow.xaml">
+    <Compile Include="Commands\ControlStatic.cs" />
+    <Compile Include="Commands\commandBitmap.cs" />
+    <Compile Include="Commands\delegateCommand.cs" />
+    <Compile Include="Models\BlockElements\AllModel\NAlert.cs" />
+    <Compile Include="Models\BlockElements\AllModel\NButton.cs" />
+    <Compile Include="Models\BlockElements\AllModel\NSwitch.cs" />
+    <Compile Include="Models\BlockElements\Block190350\Block190350.cs" />
+    <Compile Include="Models\BlockElements\Block190350\F1Shina.cs" />
+    <Compile Include="Models\BlockElements\Block190350\F1tumbler0.cs" />
+    <Compile Include="Models\BlockElements\Block190350\F1tumbler1.cs" />
+    <Compile Include="Models\BlockElements\Block190350\F1tumbler2.cs" />
+    <Compile Include="Models\BlockElements\Block190350\F1tumbler3.cs" />
+    <Compile Include="Models\BlockElements\Block190350\F1tumbler4.cs" />
+    <Compile Include="Models\BlockElements\Block190350\F1tumbler5.cs" />
+    <Compile Include="Models\BlockElements\Block190350\F1tumbler6.cs" />
+    <Compile Include="Models\BlockElements\Block190350\F1tumbler7.cs" />
+    <Compile Include="Models\BlockElements\Block19260100\Block19260100.cs" />
+    <Compile Include="Models\BlockElements\Block19260100\F2Shina0.cs" />
+    <Compile Include="Models\BlockElements\Block19260100\F2shina1.cs" />
+    <Compile Include="Models\BlockElements\Block19260100\F2shina2.cs" />
+    <Compile Include="Models\BlockElements\Block19260100\F2shina3.cs" />
+    <Compile Include="Models\BlockElements\Block19260100\F2shina4.cs" />
+    <Compile Include="Models\BlockElements\Block1960\Block1960Model.cs" />
+    <Compile Include="Models\BlockElements\Block1960\F3Shina.cs" />
+    <Compile Include="Models\BlockElements\BlockF8\BlockF8.cs" />
+    <Compile Include="Models\BlockElements\BlockF8\shina.cs" />
+    <Compile Include="Models\BlockElements\BlockF8\tumblerB2.cs" />
+    <Compile Include="Models\BlockElements\BlockF8\TumblerB4.cs" />
+    <Compile Include="Models\BlockElements\Oscilloscope\Oscilloscope.cs" />
+    <Compile Include="ViewModels\LaboratoryWorkView.cs" />
+    <Compile Include="ViewModels\PageViewModels\Block190350View.cs" />
+    <Compile Include="ViewModels\PageViewModels\Block192601View.cs" />
+    <Compile Include="ViewModels\PageViewModels\Block1960View.cs" />
+    <Compile Include="ViewModels\PageViewModels\BlockF8View.cs" />
+    <Compile Include="ViewModels\PageViewModels\OscilloscopeView.cs" />
+    <Compile Include="Views\PageFrame\Block19035.xaml.cs">
+      <DependentUpon>Block19035.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PageFrame\Block1926.xaml.cs">
+      <DependentUpon>Block1926.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PageFrame\Block1960.xaml.cs">
+      <DependentUpon>Block1960.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PageFrame\BlockF8.xaml.cs">
+      <DependentUpon>BlockF8.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PageFrame\Oscilloscope.xaml.cs">
+      <DependentUpon>Oscilloscope.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Views\LaboratoryWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -62,10 +143,33 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="MainWindow.xaml.cs">
+    <Compile Include="Views\LaboratoryWindow.xaml.cs">
+      <DependentUpon>LaboratoryWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Views\PageFrame\Block19035.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PageFrame\Block1926.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PageFrame\Block1960.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PageFrame\BlockF8.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PageFrame\Oscilloscope.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -85,6 +189,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -92,6 +197,709 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 и x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\19.03.50.00.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\19.26.01.00.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\19.60.00.00.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\19035000.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Alert_off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Alert_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button_17_off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button_17_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\c1_65a.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F0alert0_off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F0alert0_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F0alert1_off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F0alert1_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F0alert2_off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F0alert2_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F0alert3_off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F0alert3_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F0alert4_off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F0alert4_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F0alert5_off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F0alert5_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F0alert6_off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F0alert6_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F1alert0_off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F1alert0_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F1alert1_off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F1alert1_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F1alert2_off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F1alert2_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F1alert3_off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F1alert3_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F1imit_off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F1imit_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F1shina0_0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F1shina0_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F1shina0_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F1shina0_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F1shina0_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F1shina0_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F1shina0_6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F1switcher0_off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F1switcher0_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F1switcher1_off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F1switcher1_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F1switcher2_off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F1switcher2_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F1tumbler0_0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F1tumbler0_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F1tumbler0_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F1tumbler0_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F1tumbler0_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F1tumbler0_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F1tumbler1_0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F1tumbler1_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F1tumbler1_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F1tumbler1_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F1tumbler1_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F1tumbler1_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F1tumbler1_6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F1tumbler1_7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F1tumbler1_8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F1tumbler1_9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F1tumbler1_10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F1tumbler1_11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F1tumbler2_0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F1tumbler2_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F1tumbler2_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F1tumbler2_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F1tumbler2_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F1tumbler3_0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F1tumbler3_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F1tumbler3_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F1tumbler3_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F1tumbler3_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F1tumbler3_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F1tumbler3_6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F1tumbler3_7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F1tumbler3_8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F1tumbler4_0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F1tumbler4_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F1tumbler4_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F1tumbler4_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F1tumbler5_0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F1tumbler5_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F1tumbler5_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F1tumbler5_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F1tumbler5_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F1tumbler5_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F1tumbler5_6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F1tumbler5_7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F1tumbler5_8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F1tumbler5_9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F1tumbler5_10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F1tumbler5_11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F1tumbler5_12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F1tumbler6_0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F1tumbler6_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F1tumbler6_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F1tumbler6_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F1tumbler6_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F1tumbler6_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F1tumbler6_6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F1tumbler6_7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F1tumbler6_8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F1tumbler6_9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F1tumbler6_10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F1tumbler6_11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F1tumbler7_0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F1tumbler7_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F1tumbler7_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F1tumbler7_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F1tumbler7_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F2alert0_off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F2alert0_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F2alert1_off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F2alert1_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F2alert2_off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F2alert2_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F2alert3_off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F2alert3_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F2shina0_0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F2shina0_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F2shina0_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F2shina0_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F2shina0_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F2shina0_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F2shina0_6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F2shina0_7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F2shina0_8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F2shina1_0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F2shina1_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F2shina1_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F2shina1_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F2shina1_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F2shina1_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F2shina1_6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F2shina1_7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F2shina1_8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F2shina1_9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F2shina1_10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F2shina1_11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F2shina1_12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F2shina2_0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F2shina2_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F2shina2_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F2shina2_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F2shina2_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F2shina2_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F2shina2_6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F2shina2_7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F2shina2_8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F2shina3_0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F2shina3_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F2shina3_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F2shina3_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F2shina3_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F2shina3_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F2shina3_6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F2shina3_7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F2shina3_8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F2shina3_9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F2shina3_10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F2shina3_11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F2shina4_0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F2shina4_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F2shina4_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F2shina4_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F2shina4_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F2shina4_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F2shina4_6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F2shina4_7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F2shina4_8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F2shina4_9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F2shina4_10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F2shina4_11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F2shina4_12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F2switcher_off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F2switcher_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F3btn_off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F3btn_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F3btn1_off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F3btn1_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F3btn2_off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F3btn2_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F3shina0_0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F3shina0_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F3shina0_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F3shina0_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F3shina0_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F3shina0_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F3shina0_6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F3shina0_7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F3shina0_8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F3shina0_9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F3shina0_10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F3shina0_11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nalert_off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nalert_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nswitch_off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nswitch_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\osc1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Oscill1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\redbutton_off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shina_0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shina_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shina_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shina_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shina_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shina_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shina_6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shina_7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Switch_off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Switch_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tumbler1_0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tumbler1_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tumbler1_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tumbler1_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tumbler1_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tumbler1_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tumbler1_6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tumbler1_7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tumbler1_8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tumbler1_9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tumbler1_10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tumbler1_11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tumbler2_0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tumbler2_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tumbler2_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ф8.03.05.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

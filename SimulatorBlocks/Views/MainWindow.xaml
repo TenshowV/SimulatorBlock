@@ -1,0 +1,114 @@
+﻿<Window x:Class="SimulatorBlocks.MainWindow"
+        WindowState="Normal"
+        WindowStyle="ToolWindow"
+        WindowStartupLocation="CenterScreen"
+        Height="600"
+        Width="800"       
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SimulatorBlocks.Views"
+        mc:Ignorable="d"
+        Title="Лабораторная работа №2" ResizeMode="NoResize"
+        Background="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.Background>
+            <LinearGradientBrush>
+                <LinearGradientBrush.GradientStops>
+                    <GradientStop Offset="0.4" Color="Silver"/>
+                </LinearGradientBrush.GradientStops>
+            </LinearGradientBrush>
+
+        </Grid.Background>
+        <Button x:Name="control"
+                Content="Контроль" 
+                HorizontalAlignment="Center"
+                Height="31" Margin="240,0,253.6,72.6"
+                VerticalAlignment="Bottom" Width="300" Click="controlModeClick"
+                >
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                    <GradientStop Color="#FFEBEBEB" Offset="0.5"/>
+                    <GradientStop Color="#FFDDDDDD" Offset="0.5"/>
+                    <GradientStop Color="#FFFFFCFC" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="show" 
+                Content="Демонстрация" 
+                HorizontalAlignment="Center" 
+                Height="31" 
+                Margin="240,0,253.6,108.6" 
+                Width="300" 
+                
+                RenderTransformOrigin="0.5,0.5"
+                VerticalAlignment="Bottom" Click="demoClick">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                    <GradientStop Color="#FFEBEBEB" Offset="0.5"/>
+                    <GradientStop Color="#FFDDDDDD" Offset="0.5"/>
+                    <GradientStop Color="#FFFBF8F8" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="learns" 
+                Content="Обучение" 
+                HorizontalAlignment="Center" 
+                Height="31" 
+                Margin="240,0,253.6,144.6" 
+                Width="300" 
+                RenderTransformOrigin="0.47,1.674" 
+                VerticalAlignment="Bottom" Click="learnModeClick" 
+                >
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                    <GradientStop Color="#FFEBEBEB" Offset="0.5"/>
+                    <GradientStop Color="#FFDDDDDD" Offset="0.5"/>
+                    <GradientStop Color="#FFFFFEFE" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Label x:Name="nameLab" Content="&#xA;Поиск отказов и ремонт цифровой аппаратуры, &#xA;применяемой в изделии: Ф8.03.05М                 &#xA;" HorizontalAlignment="Center" Height="120" Margin="10,10,9.6,441.2" VerticalAlignment="Center" Width="774" FontSize="30" FontFamily="Tw Cen MT Condensed Extra Bold" FontWeight="Bold"/>
+        <RadioButton x:Name="radioButton" Content="Ф8.03.05.00" HorizontalAlignment="Center" Margin="568,794,553.6,458.6" VerticalAlignment="Center" FontSize="18.667" FontWeight="Bold" FontFamily="Times New Roman" Width="152" RenderTransformOrigin="-0.118,0.714" IsEnabled="False"/>
+        <Button x:Name="exit" 
+                Content="Выход"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Bottom" 
+                Width="300" 
+                Margin="240,0,253.6,36.6" 
+                Height="31" Click="exitClick" 
+                >
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                    <GradientStop Color="#FFEBEBEB" Offset="0.5"/>
+                    <GradientStop Color="#FFDDDDDD" Offset="0.5"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <StackPanel HorizontalAlignment="Left" Height="240" VerticalAlignment="Top" Width="774" Margin="10,130,0,0">
+            <Label Height="45" Margin="0,0,0.4,0" Content="Выберите какую процедуру нужно запустить.&#xA;Процедуры представлены ниже"/>
+            <RadioButton x:Name="radioButton1"
+                         Content="Установка порога срабатывания схемы автоматического контроля блока Ф8.03.05М по сигналу прохождения" />
+            <RadioButton x:Name="radioButton2" 
+                         Content="Установка порога срабатывания схемы автоматического контроля блока Ф8.03.05М по сигналу подавления"/>
+            <RadioButton x:Name="radbt3" 
+                         Content="Проверка работы схем АРУ в блоке Ф8.03.05М"/>
+            <RadioButton x:Name="radbt4" 
+                         Content="Проверка динамического диапозона блока Ф8.03.05М"/>
+            <RadioButton x:Name="radbt5" 
+                         Content="Проверка ограничения входного импульса возбуждения в блоке Ф8.03.05М"/>
+            <RadioButton x:Name="radbt6" 
+                         Content="Выравнивание амплитуды задержанного и незадержанного сигналов"/>
+
+        </StackPanel>
+    </Grid>
+</Window>

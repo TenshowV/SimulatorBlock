@@ -46,7 +46,7 @@
     
     mimetype: application/x-microsoft.net.object.binary.base64
     value   : The object must be serialized with 
-            : System.Serialization.Formatters.Binary.BinaryFormatter
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
             : and then encoded with base64 encoding.
     
     mimetype: application/x-microsoft.net.object.soap.base64
@@ -60,6 +60,7 @@
             : and then encoded with base64 encoding.
     -->
   <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
     <xsd:element name="root" msdata:IsDataSet="true">
       <xsd:complexType>
         <xsd:choice maxOccurs="unbounded">
@@ -68,9 +69,10 @@
               <xsd:sequence>
                 <xsd:element name="value" type="xsd:string" minOccurs="0" />
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" />
+              <xsd:attribute name="name" use="required" type="xsd:string" />
               <xsd:attribute name="type" type="xsd:string" />
               <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="assembly">
@@ -85,9 +87,10 @@
                 <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
                 <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
               <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
               <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="resheader">
@@ -109,9 +112,697 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Alert_off" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Alert_off.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Alert_on" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Alert_on.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Button_17_off" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Button_17_off.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Button_17_on" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Button_17_on.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="c1_65a" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\c1_65a.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F0alert0_off" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F0alert0_off.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F0alert0_on" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F0alert0_on.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F0alert1_off" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F0alert1_off.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F0alert1_on" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F0alert1_on.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F0alert2_off" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F0alert2_off.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F0alert2_on" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F0alert2_on.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F0alert3_off" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F0alert3_off.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F0alert3_on" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F0alert3_on.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F0alert4_off" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F0alert4_off.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F0alert4_on" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F0alert4_on.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F0alert5_off" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F0alert5_off.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F0alert5_on" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F0alert5_on.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F0alert6_off" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F0alert6_off.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F0alert6_on" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F0alert6_on.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F1alert0_off" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F1alert0_off.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F1alert0_on" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F1alert0_on.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F1alert1_off" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F1alert1_off.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F1alert1_on" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F1alert1_on.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F1alert2_off" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F1alert2_off.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F1alert2_on" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F1alert2_on.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F1alert3_off" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F1alert3_off.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F1alert3_on" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F1alert3_on.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F1imit_off" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F1imit_off.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F1imit_on" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F1imit_on.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F1shina0_0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F1shina0_0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F1shina0_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F1shina0_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F1shina0_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F1shina0_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F1shina0_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F1shina0_3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F1shina0_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F1shina0_4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F1shina0_5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F1shina0_5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F1shina0_6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F1shina0_6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F1switcher0_off" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F1switcher0_off.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F1switcher0_on" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F1switcher0_on.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F1switcher1_off" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F1switcher1_off.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F1switcher1_on" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F1switcher1_on.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F1switcher2_off" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F1switcher2_off.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F1switcher2_on" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F1switcher2_on.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F1tumbler0_0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F1tumbler0_0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F1tumbler0_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F1tumbler0_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F1tumbler0_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F1tumbler0_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F1tumbler0_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F1tumbler0_3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F1tumbler0_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F1tumbler0_4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F1tumbler0_5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F1tumbler0_5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F1tumbler1_0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F1tumbler1_0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F1tumbler1_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F1tumbler1_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F1tumbler1_10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F1tumbler1_10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F1tumbler1_11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F1tumbler1_11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F1tumbler1_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F1tumbler1_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F1tumbler1_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F1tumbler1_3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F1tumbler1_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F1tumbler1_4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F1tumbler1_5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F1tumbler1_5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F1tumbler1_6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F1tumbler1_6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F1tumbler1_7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F1tumbler1_7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F1tumbler1_8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F1tumbler1_8.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F1tumbler1_9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F1tumbler1_9.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F1tumbler2_0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F1tumbler2_0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F1tumbler2_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F1tumbler2_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F1tumbler2_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F1tumbler2_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F1tumbler2_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F1tumbler2_3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F1tumbler2_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F1tumbler2_4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F1tumbler3_0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F1tumbler3_0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F1tumbler3_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F1tumbler3_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F1tumbler3_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F1tumbler3_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F1tumbler3_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F1tumbler3_3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F1tumbler3_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F1tumbler3_4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F1tumbler3_5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F1tumbler3_5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F1tumbler3_6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F1tumbler3_6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F1tumbler3_7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F1tumbler3_7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F1tumbler3_8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F1tumbler3_8.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F1tumbler4_0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F1tumbler4_0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F1tumbler4_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F1tumbler4_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F1tumbler4_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F1tumbler4_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F1tumbler4_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F1tumbler4_3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F1tumbler5_0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F1tumbler5_0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F1tumbler5_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F1tumbler5_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F1tumbler5_10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F1tumbler5_10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F1tumbler5_11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F1tumbler5_11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F1tumbler5_12" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F1tumbler5_12.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F1tumbler5_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F1tumbler5_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F1tumbler5_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F1tumbler5_3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F1tumbler5_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F1tumbler5_4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F1tumbler5_5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F1tumbler5_5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F1tumbler5_6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F1tumbler5_6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F1tumbler5_7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F1tumbler5_7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F1tumbler5_8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F1tumbler5_8.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F1tumbler5_9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F1tumbler5_9.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F1tumbler6_0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F1tumbler6_0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F1tumbler6_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F1tumbler6_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F1tumbler6_10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F1tumbler6_10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F1tumbler6_11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F1tumbler6_11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F1tumbler6_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F1tumbler6_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F1tumbler6_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F1tumbler6_3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F1tumbler6_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F1tumbler6_4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F1tumbler6_5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F1tumbler6_5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F1tumbler6_6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F1tumbler6_6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F1tumbler6_7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F1tumbler6_7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F1tumbler6_8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F1tumbler6_8.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F1tumbler6_9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F1tumbler6_9.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F1tumbler7_0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F1tumbler7_0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F1tumbler7_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F1tumbler7_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F1tumbler7_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F1tumbler7_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F1tumbler7_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F1tumbler7_3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F1tumbler7_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F1tumbler7_4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F2alert0_off" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F2alert0_off.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F2alert0_on" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F2alert0_on.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F2alert1_off" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F2alert1_off.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F2alert1_on" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F2alert1_on.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F2alert2_off" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F2alert2_off.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F2alert2_on" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F2alert2_on.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F2alert3_off" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F2alert3_off.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F2alert3_on" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F2alert3_on.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F2shina0_0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F2shina0_0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F2shina0_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F2shina0_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F2shina0_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F2shina0_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F2shina0_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F2shina0_3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F2shina0_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F2shina0_4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F2shina0_5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F2shina0_5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F2shina0_6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F2shina0_6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F2shina0_7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F2shina0_7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F2shina0_8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F2shina0_8.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F2shina1_0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F2shina1_0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F2shina1_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F2shina1_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F2shina1_10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F2shina1_10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F2shina1_11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F2shina1_11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F2shina1_12" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F2shina1_12.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F2shina1_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F2shina1_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F2shina1_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F2shina1_3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F2shina1_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F2shina1_4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F2shina1_5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F2shina1_5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F2shina1_6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F2shina1_6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F2shina1_7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F2shina1_7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F2shina1_8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F2shina1_8.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F2shina1_9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F2shina1_9.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F2shina2_0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F2shina2_0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F2shina2_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F2shina2_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F2shina2_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F2shina2_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F2shina2_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F2shina2_3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F2shina2_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F2shina2_4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F2shina2_5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F2shina2_5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F2shina2_6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F2shina2_6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F2shina2_7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F2shina2_7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F2shina2_8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F2shina2_8.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F2shina3_0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F2shina3_0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F2shina3_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F2shina3_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F2shina3_10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F2shina3_10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F2shina3_11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F2shina3_11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F2shina3_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F2shina3_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F2shina3_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F2shina3_3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F2shina3_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F2shina3_4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F2shina3_5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F2shina3_5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F2shina3_6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F2shina3_6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F2shina3_7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F2shina3_7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F2shina3_8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F2shina3_8.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F2shina3_9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F2shina3_9.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F2shina4_0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F2shina4_0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F2shina4_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F2shina4_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F2shina4_10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F2shina4_10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F2shina4_11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F2shina4_11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F2shina4_12" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F2shina4_12.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F2shina4_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F2shina4_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F2shina4_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F2shina4_3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F2shina4_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F2shina4_4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F2shina4_5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F2shina4_5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F2shina4_6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F2shina4_6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F2shina4_7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F2shina4_7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F2shina4_8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F2shina4_8.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F2shina4_9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F2shina4_9.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F2switcher_off" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F2switcher_off.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F2switcher_on" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F2switcher_on.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F3btn1_off" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F3btn1_off.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F3btn1_on" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F3btn1_on.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F3btn2_off" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F3btn2_off.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F3btn2_on" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F3btn2_on.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F3btn_off" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F3btn_off.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F3btn_on" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F3btn_on.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F3shina0_0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F3shina0_0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F3shina0_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F3shina0_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F3shina0_10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F3shina0_10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F3shina0_11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F3shina0_11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F3shina0_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F3shina0_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F3shina0_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F3shina0_3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F3shina0_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F3shina0_4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F3shina0_5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F3shina0_5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F3shina0_6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F3shina0_6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F3shina0_7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F3shina0_7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F3shina0_8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F3shina0_8.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F3shina0_9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F3shina0_9.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Nalert_off" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Nalert_off.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Nalert_on" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Nalert_on.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Nswitch_off" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Nswitch_off.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Nswitch_on" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Nswitch_on.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="osc1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\osc1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Oscill1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Oscill1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="redbutton_off" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\redbutton_off.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Shina_0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Shina_0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Shina_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Shina_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Shina_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Shina_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Shina_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Shina_3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Shina_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Shina_4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Shina_5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Shina_5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Shina_6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Shina_6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Shina_7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Shina_7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Switch_off" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Switch_off.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Switch_on" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Switch_on.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Tumbler1_0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tumbler1_0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Tumbler1_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tumbler1_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Tumbler1_10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tumbler1_10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Tumbler1_11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tumbler1_11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Tumbler1_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tumbler1_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Tumbler1_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tumbler1_3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Tumbler1_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tumbler1_4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Tumbler1_5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tumbler1_5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Tumbler1_6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tumbler1_6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Tumbler1_7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tumbler1_7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Tumbler1_8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tumbler1_8.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Tumbler1_9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tumbler1_9.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Tumbler2_0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tumbler2_0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Tumbler2_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tumbler2_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Tumbler2_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tumbler2_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_19035000" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\19035000.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_19_03_50_00" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\19.03.50.00.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_19_26_01_00" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\19.26.01.00.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_19_60_00_00" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\19.60.00.00.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Ф8_03_05" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ф8.03.05.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

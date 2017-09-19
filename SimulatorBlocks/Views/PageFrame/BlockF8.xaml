@@ -1,0 +1,77 @@
+﻿<Page x:Class="SimulatorBlocks.Views.PageFrame.BlockF8"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:SimulatorBlocks.Views.PageFrame"
+      xmlns:vm="clr-namespace:SimulatorBlocks.ViewModels.PageViewModels"
+       mc:Ignorable="d" 
+      d:DesignHeight="400"
+      d:DesignWidth="250"
+      Title="BlockF8">
+    <Page.DataContext>
+        <vm:BlockF8View x:Name="BlockF8Context"/>
+    </Page.DataContext>
+    <Grid>
+        <Viewbox Margin="0,0,0.2,0">
+            <Canvas HorizontalAlignment="Stretch" Height="1179" Margin="0,0,0,0" VerticalAlignment="Stretch" Width="737">
+                <Image Height="1173" Width="737" Stretch="Fill" Source="{Binding drawBlock}" />
+                <Image x:Name="ImgT1" Panel.ZIndex="0"  Height="103" Canvas.Left="290" Canvas.Top="264" Width="374" 
+               Source="{Binding drawTumbler, IsAsync=False, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"             
+               Stretch="Fill">
+                    <Image.InputBindings>
+                        <MouseBinding MouseAction="LeftClick" Command="{Binding changeTumbler }"/>
+                    </Image.InputBindings>
+                </Image>
+                <Image x:Name="ImgS1" Height="68" Canvas.Left="325" Canvas.Top="394" Width="236"
+               Source="{Binding drawShina,Mode=OneWay,UpdateSourceTrigger=PropertyChanged, IsAsync=False}"
+               Stretch="Fill">
+                    <Image.InputBindings>
+                        <MouseBinding MouseAction="LeftClick" Command="{Binding changeShina}"/>
+                    </Image.InputBindings>
+                </Image>
+                <Image x:Name="ImgT2" Height="78" Canvas.Left="181" Canvas.Top="613" Width="165"
+               Source="{Binding drawTumbler1,Mode=OneWay,UpdateSourceTrigger=PropertyChanged, IsAsync=False}"
+                Stretch="Fill">
+                    <Image.InputBindings>
+                        <MouseBinding MouseAction="LeftClick" Command="{Binding changeTumbler1}"/>
+                    </Image.InputBindings>
+                </Image>
+                <Image x:Name="ImgSw1" Height="45" Canvas.Left="389" Canvas.Top="632" Width="65"
+                Source="{Binding drawSwitcher1,Mode=OneWay,UpdateSourceTrigger=PropertyChanged, IsAsync=False}"
+                Stretch="Fill">
+                    <Image.InputBindings>
+                        <MouseBinding MouseAction="LeftClick" Command="{Binding changeSwitcher1}"/>
+                    </Image.InputBindings>
+                </Image>
+                <Image x:Name="ImgSw2" Height="45" Canvas.Left="540" Canvas.Top="632" Width="65"
+               Source="{Binding drawSwitcher2,Mode=OneWay,UpdateSourceTrigger=PropertyChanged, IsAsync=False}"
+               Stretch="Fill">
+                    <Image.InputBindings>
+                        <MouseBinding MouseAction="LeftClick" Command="{Binding changeSwitcher2}"/>
+                    </Image.InputBindings>
+                </Image>
+                <Image x:Name="ImgBU17" Height="32" Canvas.Left="369" Canvas.Top="1075" Width="44"
+            Source="{Binding drawButtonU17, Mode=OneWay, UpdateSourceTrigger=PropertyChanged, IsAsync=False}"  Stretch="Fill">
+                    <Image.InputBindings>
+                        <MouseBinding MouseAction="LeftClick" Command="{Binding changeBut}"/>
+                    </Image.InputBindings>
+                </Image>
+                <Image x:Name="imgControl" Source="{Binding drawAlert,Mode=OneWay,UpdateSourceTrigger=PropertyChanged }" Height="25" 
+                   Stretch="Fill" Canvas.Left="389" Canvas.Top="548" Width="36"/>
+                <Image x:Name="imgControl1" Source="{Binding drawAlert1,Mode=OneWay,UpdateSourceTrigger=PropertyChanged }" Height="20" 
+                   Stretch="Fill" Canvas.Left="460" Canvas.Top="110" Width="33"/>
+                <Image x:Name="imgControl2" Source="{Binding drawAlert2,Mode=OneWay,UpdateSourceTrigger=PropertyChanged }" Height="20" 
+                   Stretch="Fill" Canvas.Left="389" Canvas.Top="145" Width="33"/>
+                <Image x:Name="imgControl3" Source="{Binding drawAlert3,Mode=OneWay,UpdateSourceTrigger=PropertyChanged }" Height="20" 
+                   Stretch="Fill" Canvas.Left="439" Canvas.Top="145" Width="33"/>
+                <Image x:Name="imgControl4" Source="{Binding drawAlert4,Mode=OneWay,UpdateSourceTrigger=PropertyChanged }" Height="22" 
+                   Stretch="Fill" Canvas.Left="480" Canvas.Top="141" Width="37"/>
+                <Image x:Name="imgControl5" Source="{Binding drawAlert5,Mode=OneWay,UpdateSourceTrigger=PropertyChanged }" Height="22" 
+                   Stretch="Fill" Canvas.Left="528" Canvas.Top="141" Width="33"/>
+                <Image x:Name="imgControl6" Source="{Binding drawAlert6,Mode=OneWay,UpdateSourceTrigger=PropertyChanged }" Height="22" 
+                   Stretch="Fill" Canvas.Left="387" Canvas.Top="229" Width="36"/>
+            </Canvas>
+        </Viewbox>
+    </Grid>
+</Page>
